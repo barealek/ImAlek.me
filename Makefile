@@ -1,5 +1,5 @@
 up:
-	docker compose up -d --build
+	doppler run -- docker compose up -d --build
 build:
 	docker compose build --build -d --remove-orphans
 stop:
@@ -8,7 +8,7 @@ kill:
 	docker compose kill
 restart:
 	docker compose kill
-	docker compose up -d
+	doppler run -- docker compose up -d
 logs:
 	docker compose logs -f
 update:
