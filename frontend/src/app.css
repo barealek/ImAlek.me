@@ -1,0 +1,13 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+
+html{
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+html::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}

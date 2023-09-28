@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+
+  # Connection services
+  caddy:
+    image: caddy:2.7.4-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./proxy/Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - frontend
+      - backend
+
+  cloudflare-tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN
+    depends_on:
+      - caddy
+
+  # Application services
+  frontend:
+    build:
+      context: ./frontend
+
+  backend:
+    build:
+      context: ./backend
+  
