@@ -6,7 +6,7 @@
     let experiences = [
         {
             title: "Jet-Market.dk [MC Marketplace]",
-            role: "Founder & Developer",
+            role: "Founder & Primary Developer",
             date: "Sep 2023 — Present",
             description: [
                 "• API Developer",
@@ -17,7 +17,7 @@
         },
         {
             title: "Jet-Host.dk [Hosting Firm]",
-            role: "Co-Founder",
+            role: "Founder",
             date: "Aug 2023 — Present",
             description: [
                 "• Workflow Developer",
